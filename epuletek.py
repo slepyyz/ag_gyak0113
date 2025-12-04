@@ -29,3 +29,14 @@ def magasabb(epuletek):
         if magassag>555:
             magasabb+=1
     print(f"\tAz 555 lábnál magasabb épületek száma: {magasabb}")
+
+def legoregebb(epuletek):
+    print("III/D:")
+    legoregebb=0
+    legoregebbnev=" "
+    for epulet in epuletek:
+        jelenlegido = 2025-epulet.epult
+        if jelenlegido > legoregebb:
+            legoregebb=jelenlegido
+            legoregebbnev=epulet.orszag
+    print(f"\tA legöregebb épület országa: {legoregebbnev}")
